@@ -21,7 +21,7 @@ function App() {
     if (numberAllowed) str += "1234567890";
     if (characterAllowed) str += "_@(){}$#!&*/-";
 
-    for (let i = 0; i <= length; i++) {
+    for (let i = 0; i < length; i++) {
       const char = Math.floor(Math.random() * str.length +1);
       pass += str.charAt(char);
       
