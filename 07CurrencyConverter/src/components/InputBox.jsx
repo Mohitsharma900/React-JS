@@ -4,11 +4,11 @@ function InputBox({
     label,
     amount,
     onAmountChange,
-    onCurrencyChange,
+    onconversion_ratesChange,
     amountDisabled= false,
-    currencyDisabled = false,
-    currencyOptions = [],
-    selectCurrency = "usd",
+    conversion_ratesDisabled = false,
+    conversion_ratesOptions = [],
+    selectconversion_rates = "usd",
 
     
     className = "",
@@ -32,17 +32,17 @@ function InputBox({
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
-                <p className="text-black/40 mb-2 w-full">Currency Type</p>
+                <p className="text-black/40 mb-2 w-full">conversion_rates Type</p>
                 <select
                     className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
-                    disabled = {currencyDisabled}
-                    value={selectCurrency}
-                    onChange={(e)=>{onCurrencyChange && onCurrencyChange(e.target.value)} }
+                    disabled = {conversion_ratesDisabled}
+                    value={selectconversion_rates}
+                    onChange={(e)=>{onconversion_ratesChange && onconversion_ratesChange(e.target.value)} }
                 >
                     
-                        {currencyOptions.map((currency)=>(
-                            <option key={currency} value={currency}>
-                                {currency}
+                        {conversion_ratesOptions.map((conversion_rates)=>(
+                            <option key={conversion_rates} value={conversion_rates}>
+                                {conversion_rates}
                             </option>
                         ))}
                 
